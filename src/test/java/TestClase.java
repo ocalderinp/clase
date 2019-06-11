@@ -72,6 +72,8 @@ public class TestClase {
         WebElement btnMAppointment = driver.findElement(By.id("btn-book-appointment"));
         btnMAppointment.click();
 
+        Assert.assertTrue(true);
+
         Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
         softAssert.assertEquals(driver.findElement(By.id("facility")).getText(),"Hongkong CURA Healthcare Center");
         softAssert.assertEquals(driver.findElement(By.id("hospital_readmission")).getText(),"Yes");
