@@ -73,6 +73,7 @@ public class TestClase {
         btnMAppointment.click();
 
         Assert.assertTrue(true);
+        Assert.assertFalse(false);
 
         Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
         softAssert.assertEquals(driver.findElement(By.id("facility")).getText(),"Hongkong CURA Healthcare Center");
