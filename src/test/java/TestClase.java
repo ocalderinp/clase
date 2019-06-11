@@ -72,22 +72,18 @@ public class TestClase {
         WebElement btnMAppointment = driver.findElement(By.id("btn-book-appointment"));
         btnMAppointment.click();
 
-        Assert.assertTrue(true);
-        Assert.assertFalse(false);
-
         Assert.assertTrue(driver.findElement(By.tagName("h2")).isDisplayed());
         softAssert.assertEquals(driver.findElement(By.id("facility")).getText(),"Hongkong CURA Healthcare Center");
         softAssert.assertEquals(driver.findElement(By.id("hospital_readmission")).getText(),"Yes");
         softAssert.assertEquals(driver.findElement(By.id("program")).getText(),"None");
         softAssert.assertEquals(driver.findElement(By.id("visit_date")).getText(),"20/09/2019");
         softAssert.assertEquals(driver.findElement(By.id("comment")).getText(),"Bla bla bla bla");
-        softAssert.assertAll();
-
     }
 
 
     @AfterClass
     public void tearDown(){
+        softAssert.assertAll();
         driver.quit();
     }
 
